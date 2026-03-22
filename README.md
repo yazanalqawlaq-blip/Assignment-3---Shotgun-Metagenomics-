@@ -1,15 +1,5 @@
 # Assignment 3: Shotgun Metagenomics Analysis of Vegan and Omnivore Gut Microbiomes
- 
-## Table of Contents
-- [Introduction](#introduction)
-- [Methods](#methods)
-- [Results](#results)
-- [Discussion](#discussion)
-- [Limitations](#limitations)
-- [Conclusion](#conclusion)
-- [References](#references)
-- [Project Structure](#project-structure)
- 
+
 ---
  
 ## Introduction
