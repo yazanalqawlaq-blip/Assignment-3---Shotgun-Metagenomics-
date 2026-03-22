@@ -47,3 +47,22 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# raw reads and trimmed reads (large files not needed)
+input_data/raw_reads/
+input_data/kraken2_db/
+output_files/qc/*_trimmed_*.fastq.gz
+
+# per-read kraken2 output (large files not needed)
+output_files/kraken2/*.kraken2
+
+# sra toolkit cache
+sra_cache/
+
+# slurm logs
+slurm/*.out
+slurm/*.err
+
+# download logs
+download_log.txt
+db_download_log.txt
