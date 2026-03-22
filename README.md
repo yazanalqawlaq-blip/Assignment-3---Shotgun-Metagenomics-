@@ -1,6 +1,33 @@
 # Assignment 3: Shotgun Metagenomics Analysis of Vegan and Omnivore Gut Microbiomes
 
 ---
+
+## Project Structure
+ 
+```
+Assignment-3---Shotgun-Metagenomics-/
+├── README.md
+├── .gitignore
+├── scripts/
+│   ├── 01_download_data.sh
+│   ├── 02_qc_fastp.sh
+│   ├── 03_download_kraken2_db.sh
+│   ├── 04_kraken2_classify.sh
+│   ├── 05_bracken_reestimate.sh
+│   ├── 06_prep_biom.sh
+│   └── 07_R_analysis.R
+├── input_data/
+│   ├── raw_reads/          
+│   └── kraken2_db/         
+├── output_files/
+│   ├── qc/                 
+│   ├── kraken2/           
+│   ├── bracken/            
+│   └── R_analysis/         
+└── slurm/                  
+```
+ 
+---
  
 ## Introduction
  
@@ -107,13 +134,11 @@ At the phylum level, both vegan and omnivore gut microbiomes were dominated by B
  
 **Figure 1. Phylum-level taxonomic composition of vegan and omnivore gut microbiomes.** Stacked bar plot showing relative abundance of major phyla (>1% in any sample) in each sample, faceted by diet group. Both groups are dominated by Bacillota and Bacteroidota. Actinomycetota appears enriched in vegan samples.
  
-![Phylum Barplot](output_files/R_analysis/phylum_barplot.png)
  
 At the family level (Figure 2), composition differences between groups became more apparent. The Prevotellaceae family was prominent in several samples from both groups, though its distribution was highly variable across individuals. Bacteroidaceae, Lachnospiraceae, and Oscillospiraceae were consistently abundant in both groups. Bifidobacteriaceae was notably more abundant in the vegan samples.
  
 **Figure 2. Family-level taxonomic composition.** Stacked bar plot showing relative abundance of the top 15 families, with remaining families grouped as "Other." Faceted by diet group. Notable differences include higher Bifidobacteriaceae in vegans and variable Prevotellaceae representation across individuals in both groups.
  
-![Family Barplot](output_files/R_analysis/family_barplot.png)
  
 ### Alpha Diversity
  
@@ -121,7 +146,6 @@ Alpha diversity did not differ significantly between vegan and omnivore groups f
  
 **Figure 3. Alpha diversity comparison between vegan and omnivore groups.** Boxplots of Observed species richness, Shannon index, and Simpson index. Points represent individual samples. No significant differences were detected for any metric (Wilcoxon rank-sum test, all p > 0.05).
  
-![Alpha Diversity](output_files/R_analysis/alpha_diversity.png)
  
 **Table 4. Alpha diversity summary statistics.**
  
@@ -137,11 +161,9 @@ PCoA ordination based on Bray-Curtis dissimilarity showed partial separation bet
  
 **Figure 4. PCoA ordination of gut microbial communities based on Bray-Curtis dissimilarity.** Points represent individual samples, colored by diet group. Ellipses show 95% confidence intervals. Partial separation is visible between groups. PERMANOVA: R² = 0.212, F = 1.61, p = 0.108.
  
-![PCoA](output_files/R_analysis/pcoa_bray.png)
  
 **Figure 5. NMDS ordination based on Bray-Curtis dissimilarity.** Stress = 0.048, indicating excellent ordination fit. Diet groups show partial separation consistent with the PCoA result.
  
-![NMDS](output_files/R_analysis/nmds_bray.png)
  
 **Table 5. PERMANOVA results (adonis2, 999 permutations).**
  
@@ -176,11 +198,9 @@ ALDEx2 effect size analysis showed trends in taxa abundance between groups even 
  
 **Figure 6. ANCOM-BC2 differential abundance results.** Lollipop plot of log fold change (Vegan vs Omnivore) for genera with q < 0.25. Error bars represent standard error. No taxa reached q < 0.05 (all shown in grey). Positive values indicate higher abundance in vegans.
  
-![ANCOM-BC2 Lollipop](output_files/R_analysis/ancombc2_lollipop.png)
  
 **Figure 7. ALDEx2 effect size plot.** Top 10 genera with the largest positive and negative effect sizes between diet groups. Positive effect indicates higher abundance in omnivores. None reached BH-corrected significance at p < 0.05.
  
-![ALDEx2 Effect](output_files/R_analysis/aldex2_effect.png)
  
 ---
  
@@ -280,28 +300,4 @@ Wu, G. D., Chen, J., Hoffmann, C., Bittinger, K., Chen, Y. Y., Keilbaugh, S. A.,
  
 ---
  
-## Project Structure
- 
-```
-Assignment-3---Shotgun-Metagenomics-/
-├── README.md
-├── .gitignore
-├── scripts/
-│   ├── 01_download_data.sh
-│   ├── 02_qc_fastp.sh
-│   ├── 03_download_kraken2_db.sh
-│   ├── 04_kraken2_classify.sh
-│   ├── 05_bracken_reestimate.sh
-│   ├── 06_prep_biom.sh
-│   └── 07_R_analysis.R
-├── input_data/
-│   ├── raw_reads/          # gitignored (large files)
-│   └── kraken2_db/         # gitignored (large files)
-├── output_files/
-│   ├── qc/                 # fastp reports
-│   ├── kraken2/            # classification reports
-│   ├── bracken/            # abundance estimates
-│   └── R_analysis/         # BIOM file, figures, stats
-└── slurm/                  # job logs (gitignored)
-```
- 
+
