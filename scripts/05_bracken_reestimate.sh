@@ -11,7 +11,7 @@
 # 05_bracken_reestimate.sh
 # Description: Bracken abundance re-estimation from Kraken2 reports
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome 
+# Source: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 bracken/3.0
