@@ -11,7 +11,7 @@
 # 02_qc_fastp.sh
 # Description: QC and adapter trimming on raw paired-end shotgun reads
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome (Italian cohort)
+# Organism: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 fastp/1.0.1
@@ -43,8 +43,8 @@ for SRR in ${SAMPLES}; do
         --cut_window_size 4 \
         --cut_mean_quality 20
 
-    # phred 20 = 99% base call accuracy, pretty standard cutoff
-    # length_required 50 keeps reads long enough to be useful for kmer classification
+    # phred 20 = 99% base call accuracy, using standard cutoff
+    # using length_required 50 because it keeps reads long enough to be useful for kmer classification
     # cut_front/cut_tail does sliding window trimming from both ends
     # --correction fixes mismatched bases in overlapping paired-end regions
     # --detect_adapter_for_pe auto detects and removes illumina adapters
@@ -54,7 +54,7 @@ done
 
 echo "=== fastp complete === $(date) ==="
 
-# quick summary of what we kept vs filtered
+# summary of what we kept and what got filtered
 for SRR in ${SAMPLES}; do
     echo "--- ${SRR} ---"
     grep -A 2 '"filtering_result"' ${QCDIR}/${SRR}_fastp_report.json | head -5
