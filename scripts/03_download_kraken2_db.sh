@@ -1,5 +1,6 @@
 #!/bin/bash
-# running this script on login node
+# running this script on login node so no slurm headers
+# only including this in the scripts for reproducibility
 
 # =============================================================================
 # 03_download_kraken2_db.sh
