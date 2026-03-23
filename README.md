@@ -157,7 +157,7 @@ Classification rates with Kraken2 were low across all samples, with the large ma
 At the phylum level, both vegan and omnivore gut microbiomes were dominated by Bacillota (formerly Firmicutes) and Bacteroidota (formerly Bacteroidetes), which together accounted for the majority of classified reads in all samples (Figure 1). This is consistent with the well-established observation that these two phyla dominate the healthy human gut (Eckburg et al., 2005). Actinomycetota was visibly more abundant in the vegan samples, driven primarily by *Bifidobacterium* species. Other phyla detected at lower relative abundances included Verrucomicrobiota (represented almost entirely by *Akkermansia muciniphila*), Pseudomonadota, and Thermodesulfobacteriota.
 
 
-<img width="800" height="311" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
 
 **Figure 2. Phylum-level taxonomic composition of vegan and omnivore gut microbiomes.** Stacked bar plot showing relative abundance of major phyla (those exceeding 1% relative abundance in any sample) in each sample, faceted by diet group. Both groups are dominated by Bacillota and Bacteroidota. Actinomycetota is visibly enriched in vegan samples.
 
@@ -166,7 +166,7 @@ At the phylum level, both vegan and omnivore gut microbiomes were dominated by B
 At the family level (Figure 2), differences between groups became more apparent. Bacteroidaceae, Lachnospiraceae, and Oscillospiraceae were consistently abundant across both groups, as expected for a healthy adult gut community. Prevotellaceae showed high inter-individual variability, being particularly abundant in certain samples from both groups (e.g., SRR8146961, a vegan subject from Parma, and SRR8146969, an omnivore from Turin). Bifidobacteriaceae was noticeably more abundant in the vegan samples, consistent with the phylum-level pattern.
 
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/c0c5976b-8059-4cf1-b482-c67ae5106fcb" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/c0c5976b-8059-4cf1-b482-c67ae5106fcb" />
 
 **Figure 3. Family-level taxonomic composition.** Stacked bar plot showing relative abundance of the top 15 families by mean abundance, with remaining families grouped as "Other." Faceted by diet group. Bifidobacteriaceae is enriched in vegans. Prevotellaceae abundance is highly variable across individuals in both groups.
 
