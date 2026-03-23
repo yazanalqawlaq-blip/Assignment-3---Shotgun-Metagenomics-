@@ -11,7 +11,7 @@
 # 06_prep_biom.sh
 # Description: Convert Bracken reports to BIOM format for import into R
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome (Italian cohort)
+# Source: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 python/3.11
@@ -23,8 +23,8 @@ mkdir -p ${OUTDIR}
 
 pip install kraken-biom --break-system-packages --quiet
 
-# combine all bracken species reports into one BIOM file
-# this is what we import into phyloseq in R
+# combined all bracken species reports into one BIOM file
+# this is what i to import into phyloseq in R
 kraken-biom \
     ${BRDIR}/SRR8146974_bracken_species.report \
     ${BRDIR}/SRR8146973_bracken_species.report \
