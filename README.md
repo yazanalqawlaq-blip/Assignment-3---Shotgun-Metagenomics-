@@ -51,15 +51,13 @@ Assignment-3---Shotgun-Metagenomics-/
 │   ├── 05_bracken_reestimate.sh
 │   ├── 06_prep_biom.sh
 │   └── 07_R_analysis.R
-├── input_data/
-│   ├── raw_reads/          # gitignored (large files)
-│   └── kraken2_db/         # gitignored (large files)
 ├── output_files/
-│   ├── qc/                 # fastp HTML reports
-│   ├── kraken2/            # classification reports (.k2report)
-│   ├── bracken/            # abundance estimates and species reports
-│   └── R_analysis/         # BIOM file, diversity stats, ANCOM-BC2/ALDEx2 results
-└── slurm/                  # job logs (gitignored)
+│   ├── qc/                      # fastp HTML reports (8 samples)
+│   ├── kraken2/                 # Kraken2 classification reports (8 .k2report files)
+│   ├── bracken/                 # Bracken abundance estimates and species reports
+│   └── R_analysis/
+│       └── combined_bracken.biom
+└── input_data/                  # gitignored (raw reads and kraken2 database)
 ```
 
 ---
