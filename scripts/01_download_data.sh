@@ -1,12 +1,11 @@
 #!/bin/bash
-# no SLURM headers here since compute nodes don't have internet
-# have to run this directly on the login node
+# no SLURM headers here, running this straight on login node
 
 # =============================================================================
 # 01_download_data.sh
 # Description: Download raw shotgun metagenomics reads from NCBI SRA
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome (Italian cohort)
+# Organism: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 gcc/12.3 sra-toolkit/3.0.9
@@ -22,7 +21,6 @@ echo '/repository/user/main/public/root = "/scratch/yazanalq/sra_cache"' > ~/.nc
 
 # 4 vegan + 4 omnivore, all paired-end NextSeq 500
 # chose these for similar depth (~9-11 GB) so comparisons aren't biased
-# vegans are from a mix of Turin/Bari/Parma, omnivores mostly Turin
 VEGAN="SRR8146974 SRR8146973 SRR8146965 SRR8146961"
 OMNIVORE="SRR8146969 SRR8146975 SRR8146970 SRR8146976"
 ALL="${VEGAN} ${OMNIVORE}"
@@ -30,21 +28,21 @@ ALL="${VEGAN} ${OMNIVORE}"
 for SRR in ${ALL}; do
     echo "--- ${SRR} --- $(date) ---"
 
-    # skip if already downloaded
+    # double check to make sure no duplicates
     if [ -f "${SRR}_1.fastq.gz" ] && [ -f "${SRR}_2.fastq.gz" ]; then
         echo "already exists, skipping"
         continue
     fi
 
-    # prefetch first then convert, way more reliable for big files
+    # prefetching then converting
     prefetch ${SRR} --max-size 20G -O .
     fasterq-dump ${SRR} --split-files --threads 4 --progress
 
-    # compress immediately, uncompressed fastqs are massive
+    # compressing files
     gzip ${SRR}_1.fastq
     gzip ${SRR}_2.fastq
 
-    # clean up the .sra file so we don't waste space
+    # clean up the .sra file 
     rm -rf ${SRR}
 
     echo "${SRR} done"
