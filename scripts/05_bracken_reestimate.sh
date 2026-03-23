@@ -11,7 +11,7 @@
 # 05_bracken_reestimate.sh
 # Description: Bracken abundance re-estimation from Kraken2 reports
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome (Italian cohort)
+# Organism: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 bracken/3.0
@@ -26,7 +26,7 @@ SAMPLES="SRR8146974 SRR8146973 SRR8146965 SRR8146961 SRR8146969 SRR8146975 SRR81
 
 # run bracken at species level for each sample
 # this redistributes reads that kraken2 assigned at genus or higher
-# back down to species, adjusting for genome size (Lu et al. 2017)
+# back down to species, adjusting for genome size 
 for SRR in ${SAMPLES}; do
     echo "--- ${SRR} --- $(date) ---"
 
@@ -39,7 +39,7 @@ for SRR in ${SAMPLES}; do
         -l S \
         -t 10
 
-    # -r 150 because our reads are ~150 bp (NextSeq 500 paired-end)
+    # -r 150 because our reads are ~150 bp 
     # -l S for species level
     # -t 10 filters out anything with fewer than 10 reads
 
