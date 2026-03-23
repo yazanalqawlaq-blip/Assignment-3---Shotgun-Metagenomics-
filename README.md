@@ -150,11 +150,15 @@ Quality filtering with fastp retained a high proportion of reads across all samp
 
 ### Taxonomic Classification
 
-Classification rates with Kraken2 were low across all samples, with the large majority of reads remaining unclassified (over 96% in all samples). For example, SRR8146974 had approximately 34.9 million quality-filtered reads, of which only around 265,000 were classified at the species level and subsequently processed by Bracken. This low classification rate is expected with the Standard-8 database, which is a reduced version of the full Kraken2 standard database and contains only a fraction of the reference genomes available in larger databases. After Bracken re-estimation, 225 species were identified across the 8 samples, with a mean of 107 species per sample (range: 91 to 123).
+Classification rates with Kraken2 were low across all samples, with the large majority of reads remaining unclassified (over 96% in all samples). For example, SRR8146974 had approximately 34.9 million quality-filtered reads, of which only around 265,000 were classified at the species level and subsequently processed by Bracken. This low classification rate is expected with the Standard-8 database, which is a reduced version of the full Kraken2 standard database and contains only a fraction of the reference genomes available in larger databases. After Bracken re-estimation, 225 species were identified across the 8 samples, with a mean of 107 species per sample (range: 91 to 123). Rarefaction curves for all eight samples reached an asymptote well before the total number of classified reads, confirming that the sequencing depth was adequate to capture the species diversity present in each sample despite the low overall classification rate (Figure 1).
+
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/1a49dff8-85b9-4311-be85-ded4b2f4bf4f" />
+
+**Figure 1. Rarefaction curves for all eight samples.** Each curve represents one sample, showing the number of species detected as a function of sequencing depth. All curves plateau well before reaching the total number of classified reads, indicating that sequencing depth was sufficient to capture the majority of species diversity in each sample.
 
 ### Taxonomic Composition
 
-At the phylum level, both vegan and omnivore gut microbiomes were dominated by Bacillota (formerly Firmicutes) and Bacteroidota (formerly Bacteroidetes), which together accounted for the majority of classified reads in all samples (Figure 1). This is consistent with the well-established observation that these two phyla dominate the healthy human gut (Eckburg et al., 2005). Actinomycetota was visibly more abundant in the vegan samples, driven primarily by *Bifidobacterium* species. Other phyla detected at lower relative abundances included Verrucomicrobiota (represented almost entirely by *Akkermansia muciniphila*), Pseudomonadota, and Thermodesulfobacteriota.
+At the phylum level, both vegan and omnivore gut microbiomes were dominated by Bacillota (formerly Firmicutes) and Bacteroidota (formerly Bacteroidetes), which together accounted for the majority of classified reads in all samples (Figure 2). This is consistent with the well-established observation that these two phyla dominate the healthy human gut (Eckburg et al., 2005). Actinomycetota was visibly more abundant in the vegan samples, driven primarily by *Bifidobacterium* species. Other phyla detected at lower relative abundances included Verrucomicrobiota (represented almost entirely by *Akkermansia muciniphila*), Pseudomonadota, and Thermodesulfobacteriota.
 
 
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
@@ -163,7 +167,7 @@ At the phylum level, both vegan and omnivore gut microbiomes were dominated by B
 
 
 
-At the family level (Figure 2), differences between groups became more apparent. Bacteroidaceae, Lachnospiraceae, and Oscillospiraceae were consistently abundant across both groups, as expected for a healthy adult gut community. Prevotellaceae showed high inter-individual variability, being particularly abundant in certain samples from both groups (e.g., SRR8146961, a vegan subject from Parma, and SRR8146969, an omnivore from Turin). Bifidobacteriaceae was noticeably more abundant in the vegan samples, consistent with the phylum-level pattern.
+At the family level (Figure 3), differences between groups became more apparent. Bacteroidaceae, Lachnospiraceae, and Oscillospiraceae were consistently abundant across both groups, as expected for a healthy adult gut community. Prevotellaceae showed high inter-individual variability, being particularly abundant in certain samples from both groups (e.g., SRR8146961, a vegan subject from Parma, and SRR8146969, an omnivore from Turin). Bifidobacteriaceae was noticeably more abundant in the vegan samples, consistent with the phylum-level pattern.
 
 
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/c0c5976b-8059-4cf1-b482-c67ae5106fcb" />
@@ -173,7 +177,7 @@ At the family level (Figure 2), differences between groups became more apparent.
 
 ### Alpha Diversity
 
-Alpha diversity did not differ significantly between vegan and omnivore groups for any of the three metrics tested (Figure 3, Table 4). Observed species richness was nearly identical between groups (Vegan mean = 108.8, Omnivore mean = 105.0; Wilcoxon p = 1.00). Shannon diversity was slightly higher in vegans (3.01 vs. 2.90; p = 0.49), and Simpson index values were also comparable (0.891 vs. 0.876; p = 0.69). None of these comparisons reached statistical significance, indicating that vegan and omnivore gut communities in this subset of the De Filippis et al. cohort harbor similar levels of species richness and evenness.
+Alpha diversity did not differ significantly between vegan and omnivore groups for any of the three metrics tested (Figure 4, Table 5). Observed species richness was nearly identical between groups (Vegan mean = 108.8, Omnivore mean = 105.0; Wilcoxon p = 1.00). Shannon diversity was slightly higher in vegans (3.01 vs. 2.90; p = 0.49), and Simpson index values were also comparable (0.891 vs. 0.876; p = 0.69). None of these comparisons reached statistical significance, indicating that vegan and omnivore gut communities in this subset of the De Filippis et al. cohort harbor similar levels of species richness and evenness.
 
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/3e9a1d8b-e1b6-4ccc-b37a-28ae81134198" />
 
@@ -191,7 +195,7 @@ Alpha diversity did not differ significantly between vegan and omnivore groups f
 
 ### Beta Diversity
 
-PCoA ordination based on Bray-Curtis dissimilarity showed partial separation between vegan and omnivore samples along the first two principal coordinate axes, though with overlap between groups (Figure 4). NMDS ordination produced a similar pattern (Figure 5), with a stress value of 0.048, which indicates an excellent fit (stress below 0.1 is generally considered good, and below 0.05 indicates near-perfect representation of the distance structure). The consistency between PCoA and NMDS confirms that the partial separation between diet groups is not an artifact of either ordination method.
+PCoA ordination based on Bray-Curtis dissimilarity showed partial separation between vegan and omnivore samples along the first two principal coordinate axes, though with overlap between groups (Figure 5). NMDS ordination produced a similar pattern (Figure 6), with a stress value of 0.048, which indicates an excellent fit (stress below 0.1 is generally considered good, and below 0.05 indicates near-perfect representation of the distance structure). The consistency between PCoA and NMDS confirms that the partial separation between diet groups is not an artifact of either ordination method.
 
 PERMANOVA revealed that diet explained 21.2% of the total variation in community composition (R² = 0.212, F = 1.61), though this result did not reach statistical significance (p = 0.108, 999 permutations; Table 5). The R² value is a meaningful effect size for a microbiome study, where many factors beyond diet (age, genetics, medication use, individual history) contribute to community variation, but the small sample size (n = 4 per group) limits the ability to detect this effect as statistically significant.
 
