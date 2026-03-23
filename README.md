@@ -175,7 +175,7 @@ At the family level (Figure 2), differences between groups became more apparent.
 
 Alpha diversity did not differ significantly between vegan and omnivore groups for any of the three metrics tested (Figure 3, Table 4). Observed species richness was nearly identical between groups (Vegan mean = 108.8, Omnivore mean = 105.0; Wilcoxon p = 1.00). Shannon diversity was slightly higher in vegans (3.01 vs. 2.90; p = 0.49), and Simpson index values were also comparable (0.891 vs. 0.876; p = 0.69). None of these comparisons reached statistical significance, indicating that vegan and omnivore gut communities in this subset of the De Filippis et al. cohort harbor similar levels of species richness and evenness.
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/3e9a1d8b-e1b6-4ccc-b37a-28ae81134198" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/3e9a1d8b-e1b6-4ccc-b37a-28ae81134198" />
 
 **Figure 4. Alpha diversity comparison between vegan and omnivore groups.** Boxplots of Observed species richness, Shannon index, and Simpson index, with individual sample points overlaid. No significant differences were detected for any metric (Wilcoxon rank-sum test, all p > 0.05).
 
@@ -195,11 +195,11 @@ PCoA ordination based on Bray-Curtis dissimilarity showed partial separation bet
 
 PERMANOVA revealed that diet explained 21.2% of the total variation in community composition (R² = 0.212, F = 1.61), though this result did not reach statistical significance (p = 0.108, 999 permutations; Table 5). The R² value is a meaningful effect size for a microbiome study, where many factors beyond diet (age, genetics, medication use, individual history) contribute to community variation, but the small sample size (n = 4 per group) limits the ability to detect this effect as statistically significant.
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/0e4172f3-a153-4668-8bd9-2199950612b5" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/0e4172f3-a153-4668-8bd9-2199950612b5" />
 
 **Figure 5. PCoA ordination of gut microbial communities based on Bray-Curtis dissimilarity.** Points represent individual samples, colored by diet group. Ellipses show 95% confidence intervals. Partial separation between vegan and omnivore groups is visible. PERMANOVA: R² = 0.212, F = 1.61, p = 0.108 (999 permutations).
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/0a3c5cde-3207-4e22-9d3e-c60c87fc6e11" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/0a3c5cde-3207-4e22-9d3e-c60c87fc6e11" />
 
 **Figure 6. NMDS ordination based on Bray-Curtis dissimilarity.** Stress = 0.048, indicating excellent ordination fit. Diet groups show partial separation consistent with the PCoA result.
 
@@ -237,11 +237,11 @@ Despite the lack of statistically significant results from the main differential
 
 ALDEx2 effect size analysis revealed trends in taxon abundance between groups even though none reached statistical significance. The genera with the largest negative effect sizes (indicating trends toward higher abundance in omnivores) included *Phocaeicola* (effect = -0.65) and *Parabacteroides* (effect = -0.63). On the vegan side, *Bifidobacterium* showed a strong trend toward enrichment (ANCOM-BC2 log fold change = 2.98, q = 0.68), and the raw count data confirmed this: *Bifidobacterium adolescentis* read counts ranged from 13,683 to 44,505 in vegan samples compared to 0 to 1,246 in omnivore samples.
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/9f602bc5-1469-40f5-b0be-8008c28de73a" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/9f602bc5-1469-40f5-b0be-8008c28de73a" />
 
 **Figure 7. ANCOM-BC2 differential abundance results at genus level.** Lollipop plot showing log fold change (Vegan vs. Omnivore) for genera with Holm-adjusted q < 0.25. Error bars represent standard error of the log fold change estimate. No taxa reached q < 0.05 (all points shown in grey). Positive log fold change values indicate higher abundance in vegans.
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/8c5ac854-98d9-4a24-85d4-9250e1dc3443" />
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/8c5ac854-98d9-4a24-85d4-9250e1dc3443" />
 
 **Figure 8. ALDEx2 effect size plot.** Top 10 genera with the largest positive and negative ALDEx2 effect sizes between omnivore and vegan groups. Positive effect size indicates higher abundance in omnivores. No genera reached Benjamini-Hochberg corrected significance at p < 0.05.
 
