@@ -52,12 +52,12 @@ Assignment-3---Shotgun-Metagenomics-/
 │   ├── 06_prep_biom.sh
 │   └── 07_R_analysis.R
 ├── output_files/
-│   ├── qc/                      # fastp HTML reports (8 samples)
-│   ├── kraken2/                 # Kraken2 classification reports (8 .k2report files)
-│   ├── bracken/                 # Bracken abundance estimates and species reports
+│   ├── qc/                      
+│   ├── kraken2/                
+│   ├── bracken/                 
 │   └── R_analysis/
 │       └── combined_bracken.biom
-└── input_data/                  # gitignored (raw reads and kraken2 database)
+└── input_data/ # gitignored (large files not included)                  
 ```
 
 ---
