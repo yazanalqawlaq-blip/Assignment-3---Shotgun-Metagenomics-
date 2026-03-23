@@ -157,7 +157,8 @@ Classification rates with Kraken2 were low across all samples, with the large ma
 At the phylum level, both vegan and omnivore gut microbiomes were dominated by Bacillota (formerly Firmicutes) and Bacteroidota (formerly Bacteroidetes), which together accounted for the majority of classified reads in all samples (Figure 1). This is consistent with the well-established observation that these two phyla dominate the healthy human gut (Eckburg et al., 2005). Actinomycetota was visibly more abundant in the vegan samples, driven primarily by *Bifidobacterium* species. Other phyla detected at lower relative abundances included Verrucomicrobiota (represented almost entirely by *Akkermansia muciniphila*), Pseudomonadota, and Thermodesulfobacteriota.
 
 
-<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
+<img width="600" height="311" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
+
 **Figure 2. Phylum-level taxonomic composition of vegan and omnivore gut microbiomes.** Stacked bar plot showing relative abundance of major phyla (those exceeding 1% relative abundance in any sample) in each sample, faceted by diet group. Both groups are dominated by Bacillota and Bacteroidota. Actinomycetota is visibly enriched in vegan samples.
 
 
