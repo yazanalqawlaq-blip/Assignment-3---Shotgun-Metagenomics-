@@ -158,7 +158,6 @@ At the phylum level, both vegan and omnivore gut microbiomes were dominated by B
 
 
 <img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/08797263-3319-4c46-b68c-7a640f9e3002" />
-
 **Figure 2. Phylum-level taxonomic composition of vegan and omnivore gut microbiomes.** Stacked bar plot showing relative abundance of major phyla (those exceeding 1% relative abundance in any sample) in each sample, faceted by diet group. Both groups are dominated by Bacillota and Bacteroidota. Actinomycetota is visibly enriched in vegan samples.
 
 
