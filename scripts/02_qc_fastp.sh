@@ -11,7 +11,7 @@
 # 02_qc_fastp.sh
 # Description: QC and adapter trimming on raw paired-end shotgun reads
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome 
+# Source: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 fastp/1.0.1
