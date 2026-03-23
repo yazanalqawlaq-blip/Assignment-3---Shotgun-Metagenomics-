@@ -12,13 +12,14 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Project Structure](#project-structure)
 - [Methods](#methods)
 - [Results](#results)
 - [Discussion](#discussion)
 - [Limitations](#limitations)
 - [Conclusion](#conclusion)
 - [References](#references)
-- [Project Structure](#project-structure)
+
 
 ---
 
