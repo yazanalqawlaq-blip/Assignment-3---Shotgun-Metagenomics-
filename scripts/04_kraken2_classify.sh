@@ -11,7 +11,7 @@
 # 04_kraken2_classify.sh
 # Description: Taxonomic classification of QC'd reads using Kraken2
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome 
+# Source: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 gcc/12.3 kraken2/2.1.6
