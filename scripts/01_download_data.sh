@@ -5,7 +5,7 @@
 # 01_download_data.sh
 # Description: Download raw shotgun metagenomics reads from NCBI SRA
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome 
+# Source: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 gcc/12.3 sra-toolkit/3.0.9
