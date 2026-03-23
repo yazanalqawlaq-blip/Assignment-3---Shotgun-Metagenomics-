@@ -11,7 +11,7 @@
 # 04_kraken2_classify.sh
 # Description: Taxonomic classification of QC'd reads using Kraken2
 # Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-# Organism: Human gut metagenome (Italian cohort)
+# Organism: Human gut metagenome 
 # =============================================================================
 
 module load StdEnv/2023 gcc/12.3 kraken2/2.1.6
@@ -42,8 +42,7 @@ for SRR in ${SAMPLES}; do
 done
 
 # confidence 0.15 as recommended in lecture to reduce false positives
-# memory-mapping loads db from disk instead of RAM, slower but way less memory
-# our data is paired-end and gzipped so we need those flags
+# my data is paired-end and gzipped so i needed to add flags to get the script to run
 
 echo "=== kraken2 complete === $(date) ==="
 ls -lh ${K2DIR}/*.k2report
