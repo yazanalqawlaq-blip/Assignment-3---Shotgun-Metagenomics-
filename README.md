@@ -1,6 +1,6 @@
 # Assignment 3: Shotgun Metagenomics Analysis of Vegan and Omnivore Gut Microbiomes
 
-**Course:** BINF*6110 - Bioinformatics
+**Course:** BINF*6110 
 
 **Author:** Yazan Alqawlaq
 
