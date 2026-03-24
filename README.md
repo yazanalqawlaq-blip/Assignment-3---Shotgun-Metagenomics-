@@ -240,7 +240,7 @@ ALDEx2 effect size analysis showed trends in taxon abundance between groups even
 
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/9f602bc5-1469-40f5-b0be-8008c28de73a" />
 
-**Figure 7. ANCOM-BC2 differential abundance results at genus level.** Lollipop plot showing log fold change (Vegan vs. Omnivore) for genera with Holm-adjusted q < 0.25. Error bars represent standard error of the log fold change estimate. No taxa reached q < 0.05 (all points shown in grey). Positive log fold change values indicate higher abundance in vegans.
+**Figure 7. ANCOM-BC2 differential abundance results at genus level.** Lollipop plot showing log fold change (Vegan vs. Omnivore) for the top 20 genera ranked by Holm-adjusted q-value. Error bars represent standard error. No taxa reached q < 0.05. Positive values indicate higher abundance in vegans.
 
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/8c5ac854-98d9-4a24-85d4-9250e1dc3443" />
 
