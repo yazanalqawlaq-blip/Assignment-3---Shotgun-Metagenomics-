@@ -189,7 +189,7 @@ ancombc_out <- ancombc2(data = physeq, tax_level = "Genus",
                         prv_cut = 0.10, lib_cut = 1000, s0_perc = 0.05,
                         group = "Diet", struc_zero = TRUE, neg_lb = TRUE)
 
-cat("\nStructural zeroes:\n")
+# structural zeros
 struc_zeros <- ancombc_out$zero_ind
 struc_diff <- subset(struc_zeros,
                      `structural_zero (Diet = Omnivore)` != `structural_zero (Diet = Vegan)`)
