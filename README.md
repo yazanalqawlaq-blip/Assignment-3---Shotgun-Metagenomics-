@@ -111,19 +111,18 @@ All downstream analysis was performed in R v4.5.0 using RStudio. The BIOM file w
 ### Software Versions
 
 **Table 2. Software and versions used.**
-
-| Software | Version | Purpose | Reference |
-|:---|:---|:---|:---|
-| SRA Toolkit | 3.0.9 | Data download and FASTQ conversion | NCBI |
-| fastp | 1.0.1 | Quality control and adapter trimming | Chen et al., 2018 |
-| Kraken2 | 2.1.6 | Taxonomic classification | Wood et al., 2019 |
-| Bracken | 3.0 | Species-level abundance re-estimation | Lu et al., 2017 |
-| kraken-biom | 1.2.0 | BIOM file generation | Dabdoub, 2016 |
-| R | 4.5.0 | Statistical computing environment | R Core Team, 2024 |
-| phyloseq | 1.50.0 | Microbiome data handling and visualization | McMurdie and Holmes, 2013 |
-| vegan | 2.7-3 | Diversity metrics and PERMANOVA | Oksanen et al., 2024 |
-| ALDEx2 | 1.38.0 | Compositional differential abundance | Fernandes et al., 2014 |
-| ANCOM-BC2 | 2.8.0 | Bias-corrected differential abundance | Lin and Peddada, 2024 |
+| Software | Version | Purpose |
+|:---|:---|:---|
+| SRA Toolkit | 3.0.9 | Data download and FASTQ conversion |
+| fastp | 1.0.1 | Quality control and adapter trimming |
+| Kraken2 | 2.1.6 | Taxonomic classification |
+| Bracken | 3.0 | Species-level abundance re-estimation |
+| kraken-biom | 1.2.0 | BIOM file generation |
+| R | 4.5.0 | Statistical computing environment |
+| phyloseq | 1.50.0 | Microbiome data handling and visualization |
+| vegan | 2.7-3 | Diversity metrics and PERMANOVA |
+| ALDEx2 | 1.38.0 | Compositional differential abundance |
+| ANCOM-BC2 | 2.8.0 | Bias-corrected differential abundance |
 
 ---
 
