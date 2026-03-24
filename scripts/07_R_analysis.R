@@ -208,18 +208,15 @@ print(ancombc_sig[, c("taxon", "lfc_DietVegan", "q_DietVegan")])
 write.csv(ancombc_res, file.path(output_dir, "ancombc2_results.csv"), row.names = FALSE)
 write.csv(ancombc_sig, file.path(output_dir, "ancombc2_significant.csv"), row.names = FALSE)
 
-# ANCOM-BC2 lollipop plot
-ancombc_plot_df <- subset(ancombc_res, q_DietVegan < 0.25)
+# ANCOM-BC2 plot
+ancombc_plot_df <- ancombc_res[order(ancombc_res$q_DietVegan), ][1:20, ]
 
 ggplot(ancombc_plot_df,
        aes(x = lfc_DietVegan, y = reorder(taxon, lfc_DietVegan))) +
-    geom_point(aes(color = q_DietVegan < 0.05), size = 3) +
-    geom_errorbar(aes(xmin = lfc_DietVegan - se_DietVegan,
-                      xmax = lfc_DietVegan + se_DietVegan), width = 0.3) +
-    geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
-    scale_color_manual(values = c("grey50", "steelblue"),
-                       labels = c("q >= 0.05", "q < 0.05"),
-                       name = "Significance") +
-    labs(x = "Log Fold Change (Vegan vs Omnivore)", y = "Genus",
-         title = "Differential Abundance (ANCOM-BC2)") +
-    theme_bw()
+  geom_point(size = 3, color = "steelblue") +
+  geom_errorbar(aes(xmin = lfc_DietVegan - se_DietVegan,
+                    xmax = lfc_DietVegan + se_DietVegan), width = 0.3) +
+  geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
+  labs(x = "Log Fold Change (Vegan vs Omnivore)", y = "Genus",
+       title = "ANCOM-BC2 Differential Abundance") +
+  theme_bw()
