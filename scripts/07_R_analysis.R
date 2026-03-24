@@ -1,8 +1,6 @@
 ## 07_R_analysis.R
-## Diversity analysis and differential abundance of vegan vs omnivore gut metagenomes
-## Dataset: De Filippis et al. (2019) Cell Host & Microbe - SRP126540
-## Input: combined_bracken.biom (from kraken-biom)
-## Output: taxonomy barplots, alpha/beta diversity plots, ALDEx2 and ANCOM-BC2 results
+## R analysis for Assignment 3 - vegan vs omnivore gut metagenomes
+## Uses combined_bracken.biom from kraken-biom as input
 
 # ---- Load packages ----
 library(phyloseq)
@@ -100,10 +98,10 @@ wilcox_observed <- wilcox.test(Observed ~ Diet, data = alpha_div)
 wilcox_shannon <- wilcox.test(Shannon ~ Diet, data = alpha_div)
 wilcox_simpson <- wilcox.test(Simpson ~ Diet, data = alpha_div)
 
-cat("Wilcoxon tests (Vegan vs Omnivore):\n")
-cat("Observed:", wilcox_observed$p.value, "\n")
-cat("Shannon:", wilcox_shannon$p.value, "\n")
-cat("Simpson:", wilcox_simpson$p.value, "\n")
+# print wilcoxon results
+wilcox_observed$p.value
+wilcox_shannon$p.value
+wilcox_simpson$p.value
 
 alpha_stats <- data.frame(
     Metric = c("Observed", "Shannon", "Simpson"),
@@ -139,8 +137,7 @@ plot_ordination(physeq, ord_nmds_bray, color = "Diet") +
 metadata <- as(sample_data(physeq), "data.frame")
 permanova_result <- adonis2(phyloseq::distance(physeq, method = "bray") ~ Diet,
                             data = metadata, permutations = 999)
-cat("\nPERMANOVA result:\n")
-print(permanova_result)
+permanova_result
 
 capture.output(permanova_result, file = file.path(output_dir, "permanova_result.txt"))
 
@@ -148,9 +145,8 @@ capture.output(permanova_result, file = file.path(output_dir, "permanova_result.
 physeq_genus <- tax_glom(physeq, taxrank = "Genus")
 
 genus_counts <- as.data.frame(otu_table(physeq_genus))
-if (!taxa_are_rows(physeq_genus)) {
-    genus_counts <- t(genus_counts)
-}
+# ALDEx2 needs taxa as rows, so switching it if needed
+genus_counts <- t(genus_counts)
 
 tax_info <- as.data.frame(tax_table(physeq_genus))
 rownames(genus_counts) <- tax_info$Genus
@@ -161,8 +157,7 @@ aldex_results <- aldex(genus_counts, conditions, mc.samples = 128,
                        test = "t", effect = TRUE, denom = "all")
 
 aldex_sig <- subset(aldex_results, we.eBH < 0.05)
-cat("\nALDEx2 significant taxa (BH-corrected p < 0.05):\n")
-print(aldex_sig[, c("diff.btw", "diff.win", "effect", "we.eBH")])
+aldex_sig[, c("diff.btw", "diff.win", "effect", "we.eBH")]
 
 write.csv(aldex_results, file.path(output_dir, "aldex2_results.csv"))
 write.csv(aldex_sig, file.path(output_dir, "aldex2_significant.csv"))
@@ -202,8 +197,7 @@ print(struc_diff)
 
 ancombc_res <- ancombc_out$res
 ancombc_sig <- subset(ancombc_res, q_DietVegan < 0.05)
-cat("\nANCOM-BC2 significant taxa (q < 0.05):\n")
-print(ancombc_sig[, c("taxon", "lfc_DietVegan", "q_DietVegan")])
+ancombc_sig[, c("taxon", "lfc_DietVegan", "q_DietVegan")]
 
 write.csv(ancombc_res, file.path(output_dir, "ancombc2_results.csv"), row.names = FALSE)
 write.csv(ancombc_sig, file.path(output_dir, "ancombc2_significant.csv"), row.names = FALSE)
